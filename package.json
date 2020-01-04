@@ -9,10 +9,7 @@
   
   "author": "Idris Olubisi",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Olanetsoft/slackBot-/issues"
-  },
-  "homepage": "https://github.com/Olanetsoft/slackBot-#readme",
+  
   "dependencies": {
     "axios": "^0.19.0",
     "dotenv": "^8.2.0",
