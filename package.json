@@ -6,10 +6,7 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Olanetsoft/slackBot-.git"
-  },
+  
   "author": "Idris Olubisi",
   "license": "ISC",
   "bugs": {
@@ -19,6 +16,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2",
     "slackbots": "^1.2.0"
   }
 }
