@@ -33,8 +33,9 @@ bot.on('message', (data) => {
     handleMessage(data.text);
 })
 
+
 // Response Handler
-function handleMessage(message) {
+const handleMessage = (message) =>{
     if(message.includes(' inspire me')) {
         inspireMe()
     } else if(message.includes(' random joke')) {
@@ -44,10 +45,11 @@ function handleMessage(message) {
     }
 }
 
+
 // inspire Me
-function inspireMe() {
+const inspireMe = ()=> {
     axios.get('https://raw.githubusercontent.com/BolajiAyodeji/inspireNuggets/master/src/quotes.json')
-      .then(res => {
+        .then(res => {
             const quotes = res.data;
             const random = Math.floor(Math.random() * quotes.length);
             const quote = quotes[random].quote
@@ -56,19 +58,20 @@ function inspireMe() {
             const params = {
                 icon_emoji: ':male-technologist:'
             }
-        
+
             bot.postMessageToChannel(
                 'random',
                 `:zap: ${quote} - *${author}*`,
                 params
             );
 
-      })
+        })
 }
 
+
 // Random Joke
-function randomJoke() {
-    axios.get('https://api.chucknorris.io/jokes/random')
+const randomJoke = () =>{
+    axios.get('https://api.chucknorris.io/jokes/random')//This gets random jokes from chucknorris api
       .then(res => {
             const joke = res.data.value;
 
@@ -85,8 +88,10 @@ function randomJoke() {
       })
 }
 
+
+
 // Show Help
-function runHelp() {
+const runHelp = ()=>{
     const params = {
         icon_emoji: ':question:'
     }
