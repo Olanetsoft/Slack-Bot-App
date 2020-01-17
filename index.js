@@ -48,7 +48,7 @@ const handleMessage = (message) =>{
 
 // inspire Me
 const inspireMe = ()=> {
-    axios.get('https://raw.githubusercontent.com/BolajiAyodeji/inspireNuggets/master/src/quotes.json')
+    axios.get('https://raw.githubusercontent.com/Olanetsoft/Slack-Bot-App/quotes.json')
         .then(res => {
             const quotes = res.data;
             const random = Math.floor(Math.random() * quotes.length);
